@@ -21,6 +21,39 @@ fn strings() {
     println!("{}", letters);
 }
 
+// Format
+fn format() {
+    let name = "Dmitri";
+    let greeting = format!("Hi, I'm {}, nice to meet you", name);
+    println!("{}", greeting);
+
+    let hello = "Hello";
+    let rust = "Rust";
+    let hello_rust = format!("{}, {}!", hello, rust);
+    println!("{}", hello_rust);
+
+    let run = "Run";
+    let forest = "Forest";
+    let rfr = format!("{0}, {1}, {0}", run, forest);
+    println!("{}", rfr);
+
+    let info = format!(
+        "The name's {last}. {first} {last}.",
+        first = "James",
+        last = "Bond"
+    );
+    println!("{}", info);
+
+    let mixed = format!(
+        "{1} {} {0} {} {data}",
+        "alpha",
+        "beta",
+        data = {"delta"}
+    );
+    println!("{}", mixed);
+}
+
 fn main() {
-    strings();
+    //strings();
+    format();
 }
